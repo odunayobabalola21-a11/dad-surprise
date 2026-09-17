@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #16001f, #3b0754, #12001a);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Opening section */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.small-text {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 55px;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 35px;
+    opacity: 0.85;
+}
+
+/* Buttons */
+
+button {
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    background: white;
+    color: #6a168a;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+/* Surprise */
+
+.surprise {
+    display: none;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.card {
+    max-width: 650px;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 45px;
+    border-radius: 25px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.heart-icon {
+    font-size: 60px;
+    animation: heartbeat 1.2s infinite;
+}
+
+h2 {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.card p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 30px;
+    margin: 25px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+#secretMessage {
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    opacity: 0.7;
+}
+
+/* Floating hearts */
+
+.hearts span {
+    position: fixed;
+    bottom: -50px;
+    font-size: 25px;
+    animation: float 8s linear infinite;
+    z-index: -1;
+}
+
+.hearts span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(3) {
+    left: 40%;
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(4) {
+    left: 60%;
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(5) {
+    left: 75%;
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(6) {
+    left: 90%;
+    animation-delay: 5s;
+}
+
+/* Animations */
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Phone */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .subtitle {
+        font-size: 17px;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+}
+
+
+
